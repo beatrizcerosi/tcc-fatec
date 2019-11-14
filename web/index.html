@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MasterControll | Sistema de Monitoramento</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- favicons -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <!-- <meta name="theme-color" content="#ffffff"> -->
+        <!-- favicons -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/custom-responsive-style.css">
+        <link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="script/all-plugins.js"></script>
+        <script type="text/javascript" src="script/plugin-active.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function ($) {
+                $("#cnpj").mask("99.999.999/9999-99");
+                $("#telefone").mask("(00) 0000-0000");
+                $("#inscricaoEstadual").mask("999.999.999.999")
+            });
+
+        </script>                       
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase.js"></script>
+        <script type="text/javascript" src="firebase.js"></script>
+    </head>
+    <body data-spy="scroll" data-target=".main-navigation" data-offset="150">
+        <section id="MainContainer">
+            <!-- Header starts here -->
+            <header id="Header">
+                <nav class="main-navigation">
+                    <div class="container clearfix">
+                        <a href="javascript:void(0)" class="menu-trigger hidden-lg-up"><span>&nbsp;</span></a>
+                        <div class="main-menu hidden-md-down">
+                            <ul class="menu-list">
+                                <li><a class="nav-link" href="javascript:void(0)" data-target="#HeroBanner">Home</a></li>
+                                <li><a class="nav-link" href="javascript:void(0)" data-target="#Services">Serviços</a></li>
+                                <li><a class="nav-link" href="javascript:void(0)" data-target="#About">Sobre</a></li>
+                                <li><a class="nav-link" href="javascript:void(0)" data-target="#Portfolio">Cadastre-se</a></li>
+                                <li><a class="nav-link" href="login/login.jsp">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mobile-menu hidden-lg-up">
+                        <ul class="mobile-menu-list">
+                            <li><a class="nav-link" href="javascript:void(0)" data-target="#HeroBanner">Home</a></li>
+                            <li><a class="nav-link" href="javascript:void(0)" data-target="#Services">Serviços</a></li>
+                            <li><a class="nav-link" href="javascript:void(0)" data-target="#ContactUs">Sobre</a></li>
+                            <li><a class="nav-link" href="javascript:void(0)" data-target="#Portfolio">Cadastre-se</a></li>
+                            <li><a class="nav-link" href="login/login.html">Login</a></li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- Header ends here -->
+            <!-- Banner starts here -->
+            <section id="HeroBanner" style="background-image: url('images/banner.jpg');">
+                <div class="hero-content">
+                    <h1>Bem-vindo ao nosso site</h1>
+                    <p>O seu pedido na palma da mão</p>
+                </div>
+            </section>
+            <!-- Banner ends here -->
+            <!-- Services section starts here -->
+            <section id="Services">
+                <div class="container">
+                    <div class="block-heading">
+                        <h2>Serviços</h2>                        
+                    </div>
+                    <div class="services-wrapper">
+                        <div class="each-service">
+                            <div class="service-icon"><img height="50px" src="images/hamburguer.png"></div>
+                            <h5 class="service-title">Lanchonetes</h5>
+                            <p class="service-description">Fique por dentro das melhores lanchonetes estão todas aqui. Diversas opções de lanches.</p>
+                        </div>
+                        <div class="each-service">
+                            <div class="service-icon"><img height="50px" src="images/pizza.png"></div>
+                            <h5 class="service-title">Pizzarias</h5>
+                            <p class="service-description">As melhores pizzarias da cidade estão aqui.</p>
+                        </div>
+                        <div class="each-service">
+                            <div class="service-icon"><img height="50px" src="images/beer.png"></div>
+                            <h5 class="service-title">Bares</h5>
+                            <p class="service-description">Diversas opções de barzinhos para qualquer tipo de público.</p>
+                        </div>
+                        <div class="each-service">
+                            <div class="service-icon"><img height="50px" src="images/sorvete.png"></div>
+                            <h5 class="service-title">Sorveterias</h5>
+                            <p class="service-description">Os sorvetes, milkshakes e casquinhas estão aqui.</p>
+                        </div>
+                        <div class="each-service">
+                            <div class="service-icon"><img height="50px" src="images/temakaria.png"></div>
+                            <h5 class="service-title">Temakaria</h5>
+                            <p class="service-description">Descubra quais são os melhores restaurantes de comida japonesa reunido em um só lugar.</p>
+                        </div>
+                        <div class="each-service">
+                            <div class="service-icon"><img height="50px" src="images/espeto.png"></div>
+                            <h5 class="service-title">Espetaria</h5>
+                            <p class="service-description">Os lugares com os melhores espetinhos da cidade.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Services section ends here -->
+            <!-- About Us section starts here -->
+            <section id="About">
+                <div class="container">
+                    <div class="about-wrapper">
+                        <h2>Sobre nós</h2>
+                        <p>O MasterControll surgiu com o objetivo de facilitar a vida do usuário e do empreendedor. Com um cadastro simples da empresa, o proprietário terá acesso a informações de como anda a sua produção, independente do estabelecimento (pizzaria, lanchonete), e terá a facilidade de receber pedidos pela tela de um tablet. Contando com um sistema totalmente inovador, o usuário poderá acompanhar seu pedido estando em qualquer lugar da cidade, além de efetuar o pedido também pelo aplicativo.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- About Us section ends here -->
+            <!-- Portfolio section starts here -->
+            <section id="Portfolio">
+                <div class="container1">
+                    <div class="block-heading">
+                        <div class="form-wrap">
+                            <h2>Cadastre sua Empresa</h2>
+                            <form name="CadastrarEmpresa" method="Post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="nomerazao">Nome Razão</label>
+                                    <input type="text" class="form-control" name="nomerazao" id="nomerazao" placeholder="Nome Razão da Empresa">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nomefantasia">Nome Fantasia</label>
+                                    <input type="text" class="form-control" name="nomefantasia" id="nomefantasia" placeholder="Nome Fantasia da Empresa">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cnpj">CNPJ</label>
+                                    <input type="text" class="form-control" name="cnpj" id="cnpj" placeholder="CNPJ da Empresa">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inscricaoEstadual">Inscrição Estadual</label>
+                                    <input type="text" id="inscricaoEstadual" class="form-control" name="inscricaoEstadual" placeholder="Inscrição Estadual da Empresa">
+                                </div>
+                                <div class="form-group">
+                                    <label for="endereco">Endereço</label>
+                                    <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Endereço da Empresa">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cidade">Cidade</label>
+                                    <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Cidade da Empresa">
+                                </div>
+                                <div class="form-group">
+                                    <label for="estado">Estado</label>
+                                    <select name="estadosbrasil" id="estado" class="form-control">
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefone">Telefone</label>
+                                    <input type="text" id="telefone" class="form-control" name="telefone" placeholder="Telefone da Empresa">
+                                </div>                                
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Tipo da Empresa</label>
+                                            <select name="tipoEmpresa" id="tipoEmpresa" class="form-control">
+                                                <option value="Lanchonete">Lanchonete</option> 
+                                                <option value="Pizzaria">Pizzaria</option>                                                
+                                                <option value="Bar">Bar</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emailEmpresa">E-mail</label>
+                                    <input type="text" id="emailEmpresa" class="form-control" name="emailEmpresa" placeholder="Informe seu E-mail">
+                                </div>               
+                                <div class="form-group">
+                                    <label for="senhaEmpresa">Senha</label>
+                                    <input type="password" id="senhaEmpresa" class="form-control" name="senhaEmpresa" placeholder="Informe sua Senha">
+                                </div>               
+                                <div class="form-group">                                    
+                                    <label class="btn btn-primary" for="multfile">                                    
+                                        <input id="multfile" type="file" name="file" multiple="multiple" style="display:none"
+                                               onchange="$('#multfile-label').html(
+                        (this.files.length == 1) ? this.files[0].name : this.files.length + ' Imagens');
+                $(this).parent().addClass('btn-success')">
+
+                                        <span id="multfile-label">Selecione as imagens &hellip;</span>
+                                    </label>
+                                </div>
+                                <div class="submit-btn">
+                                    <button type="button" onclick="insertEmpresa()">Enviar</button>
+                                    <button type="button" onclick="listarEmpresa()">Listar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Portfolio section ends here -->
+            <!-- Footer section starts here -->
+            <footer id="Footer">
+                <div class="container">
+                    <div class="social-share">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-logo-wrap">
+                        Design Studio &copy; 2018. Designed by <a href="https://www.position2.com/">Position2</a>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer section ends here -->
+        </section>
+    </body>
+</html>

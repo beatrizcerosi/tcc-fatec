@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">  
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+  <div id="login_div" class="main-div">
+    <h1 class="title">MasterControll</h1>
+    <input type="email" placeholder="E-mail" id="email_field" />
+    <input type="password" placeholder="Senha" id="password_field" />
+
+    <button onclick="login()">Logar</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <button onclick="logout()">Logout</button>
+  </div>
+
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase.js"></script>
+        <script>
+                                // Initialize Firebase
+                                var firebaseConfig = {
+                                    apiKey: "AIzaSyCNqgUrhU9XcbWr4_Bt1axom3vz1M86qfY",
+                                    authDomain: "projetomonitoramento-38948.firebaseapp.com",
+                                    databaseURL: "https://projetomonitoramento-38948.firebaseio.com",
+                                    projectId: "projetomonitoramento-38948",
+                                    storageBucket: "projetomonitoramento-38948.appspot.com",
+                                    messagingSenderId: "489116049393",
+                                    appId: "1:489116049393:web:88a3cc04f9101952f86e50",
+                                    measurementId: "G-RET5S8S5RB"
+                                };
+                                // Initialize Firebase
+                                firebase.initializeApp(firebaseConfig);
+
+        </script>        
+        <script type="text/javascript" src="login.js"></script>
+    </body>
+</html>
